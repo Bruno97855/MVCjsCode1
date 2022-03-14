@@ -7,52 +7,46 @@
     <title>Consulta CEP MVC</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/Js/Scripts.js"></script>
-    
     <link rel="stylesheet" href="/css/Styles.css">
 </head>
 <body>
-    <h1><strong>Consulta CEP</strong></h1>
+    <div class="CenterText">
+        <h1><strong>Consulta CEP</strong></h1>
    
-    <input type="number"   id="cep" class="textBox" /> 
-    <button class="Buscar" id="Buscar">Buscar</button>
-    <p>Dados do CEP:</p>
-    <table >
+        <input type="text"   id="cep" class="textBox" placeholder="Digite o CEP" data-ls-module="charCounter" maxlength="8" required/> 
+        <button class="Buscar" id="Buscar">Buscar</button>
+        <p>Dados do CEP:</p>
+
+
+    </div>
+    
+    <table class="CenterScreen" >
         <tr>
             <td>CEP:</td>
             <td><input type="text" id="DataCep" class="textBox" /> </td>
-        </tr>
-        <tr>
             <td>Bairro:</td>
             <td><input type="text"   id="DataBairro" class="textBox" />  <br /></td>
         </tr>
             <tr>
             <td>Complemento:</td>
             <td><input type="text"   id="DataCompl" class="textBox" />  <br /></td>
-        </tr>
-        <tr>
             <td>IBGE:</td>
             <td><input type="text"   id="DataIBGE" class="textBox" />  <br /></td>
         </tr>
         <tr>
             <td>Logradouro:</td>
             <td><input type="text"   id="DataLograd" class="textBox" />  <br /></td>
-        </tr>
-        <tr>
             <td>Localidade:</td>
             <td><input type="text"   id="DataLocalid" class="textBox" />  <br /></td>
         </tr>
         <tr>
             <td>Siafi:</td>
             <td><input type="text"   id="DataSiafi" class="textBox" />  <br /></td>
-        </tr>
-        <tr>
             <td>UF:</td>
             <td><input type="text"   id="DataUF" class="textBox" />  <br /></td>
         </tr>
+
         </table>
-
-
-
 <!--         //arquitetura:
         //Index.html (view)
         //Index.ts (ações do botão / mostra na tela)

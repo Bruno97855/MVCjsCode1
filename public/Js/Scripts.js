@@ -1,7 +1,8 @@
 $(document).ready(()=>{
     
     $("#Buscar").on("click",function(){
-        const cep = $("#cep").val();
+     var cep = $("#cep").val();
+     
         $.ajax({
         url:"/index/"+ cep,
         success: function(data){

@@ -13,10 +13,10 @@ usuarios: (req:Request, res:Response) =>{
     res.send(params.id)
 },
 //da  repository
-APIViaCEP: async (req:Request<CEPViewModel>, res:Response) =>{
-    const CEPViewModel = req.params;
-    console.log(CEPViewModel.cep)
-       const BuscaCep = await AxiosRequest.get(`https://viacep.com.br/ws/${CEPViewModel.cep}/json/`);
+APIViaCEP: async (req:Request, res:Response) =>{
+    
+    const DadosViewModel = new CEPViewModel(req.params.id);
+       const BuscaCep = await AxiosRequest.get(`https://viacep.com.br/ws/${DadosViewModel.cep}/json/`);
        const Result = BuscaCep.data;
     res.send(Result)
 },
