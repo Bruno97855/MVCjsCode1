@@ -1,5 +1,5 @@
     
-    .Buscar{
+    .btn-Buscar{
     height: 30px; color: white; background-color: rgb(20, 177, 125);
     }
     .textBox{
@@ -11,3 +11,21 @@
     .CenterText{
         text-align: center;
     }
+    body{
+        background: rgb(255, 255, 255);
+        font-family: 'open sans', sans-serif;
+    }
+    /* .Box-screen {
+        width: 240px;
+        background: linear-gradient(rgb(250, 198, 57), rgb(143, 37, 204));
+        border-radius: 15px;
+        position: absolute;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        align-items: center;
+        line-height: 50px;
+        width: 600px;
+    } */

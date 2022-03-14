@@ -8,45 +8,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/Js/Scripts.js"></script>
     <link rel="stylesheet" href="/css/Styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-    <div class="CenterText">
-        <h1><strong>Consulta CEP</strong></h1>
-   
-        <input type="text"   id="cep" class="textBox" placeholder="Digite o CEP" data-ls-module="charCounter" maxlength="8" required/> 
-        <button class="Buscar" id="Buscar">Buscar</button>
-        <p>Dados do CEP:</p>
-
-
+    <div class="Box-screen">
+        <div class="CenterText">
+            <h1><strong>Consulta CEP</strong></h1>
+            <input type="text" id="cep" class="textBox" placeholder="Digite o CEP" data-ls-module="charCounter" maxlength="8" required/> 
+            <button class="btn-Buscar" id="Buscar">Buscar</button>
+            <p>Dados do CEP:</p>
+        </div>
+        <table class="CenterScreen" >
+            <tr>
+                <td>CEP:</td>
+                <td><input type="text" id="DataCep" class="textBox" disabled=""/> </td>
+                <td>Bairro:</td>
+                <td><input type="text"   id="DataBairro" class="textBox" disabled=""/>  <br /></td>
+            </tr>
+                <tr>
+                <td>Complemento:</td>
+                <td><input type="text"   id="DataCompl" class="textBox" disabled=""/>  <br /></td>
+                <td>IBGE:</td>
+                <td><input type="text"   id="DataIBGE" class="textBox" disabled=""/>  <br /></td>
+            </tr>
+            <tr>
+                <td>Logradouro:</td>
+                <td><input type="text"   id="DataLograd" class="textBox" disabled=""/>  <br /></td>
+                <td>Localidade:</td>
+                <td><input type="text"   id="DataLocalid" class="textBox" disabled=""/>  <br /></td>
+            </tr>
+            <tr>
+                <td>Siafi:</td>
+                <td><input type="text"   id="DataSiafi" class="textBox" disabled=""/>  <br /></td>
+                <td>UF:</td>
+                <td><input type="text"   id="DataUF" class="textBox" disabled=""/>  <br /></td>
+            </tr>
+            </table>
     </div>
     
-    <table class="CenterScreen" >
-        <tr>
-            <td>CEP:</td>
-            <td><input type="text" id="DataCep" class="textBox" /> </td>
-            <td>Bairro:</td>
-            <td><input type="text"   id="DataBairro" class="textBox" />  <br /></td>
-        </tr>
-            <tr>
-            <td>Complemento:</td>
-            <td><input type="text"   id="DataCompl" class="textBox" />  <br /></td>
-            <td>IBGE:</td>
-            <td><input type="text"   id="DataIBGE" class="textBox" />  <br /></td>
-        </tr>
-        <tr>
-            <td>Logradouro:</td>
-            <td><input type="text"   id="DataLograd" class="textBox" />  <br /></td>
-            <td>Localidade:</td>
-            <td><input type="text"   id="DataLocalid" class="textBox" />  <br /></td>
-        </tr>
-        <tr>
-            <td>Siafi:</td>
-            <td><input type="text"   id="DataSiafi" class="textBox" />  <br /></td>
-            <td>UF:</td>
-            <td><input type="text"   id="DataUF" class="textBox" />  <br /></td>
-        </tr>
-
-        </table>
 <!--         //arquitetura:
         //Index.html (view)
         //Index.ts (ações do botão / mostra na tela)
@@ -67,7 +66,5 @@
                  }
              }); 
         } -->
-
- 
 </body>
 </html>

@@ -3,7 +3,8 @@ import { Request, Response } from 'express';
 import path from 'path';
 import { CEPViewModel } from '../Models/CEPViewModel';//ViewModel(Modelo da tela)
 import {AxiosRequest} from '../utils/axios'
-export default {
+
+ export default {
 get: (req:Request, res:Response) =>{
     res.sendFile(path.resolve(__dirname, '..','Views','index.html'))//Rederiza um html por exemplo a própria tela de index
 },
@@ -17,4 +18,4 @@ APIViaCEP: async (req:Request<CEPViewModel>, res:Response) =>{//Método criado p
     res.send(Result)//retorna os dados da API
 },
 
-}
+} 
