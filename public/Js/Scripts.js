@@ -3,10 +3,12 @@ $(document).ready(()=>{
     $("#Buscar").on("click",function(){
      var cep = $("#cep").val();
      debugger
-        if(cep != null && cep != ""){
-            $.ajax({
+        if(cep != null && cep != "")//Validação se tem ou não um CEP informado
+        {
+            $.ajax({//Faz a chamada na Controller passando pela route
                 url:"/index/"+ cep,
                 success: function(data){
+                //Popula as caixas de texto da tela
                 $("#DataCep").val(data.cep)
                 $("#DataBairro").val(data.bairro)
                 $("#DataCompl").val(data.complemento)
@@ -15,13 +17,15 @@ $(document).ready(()=>{
                 $("#DataLocalid").val(data.localidade)
                 $("#DataSiafi").val(data.siafi)
                 $("#DataUF").val(data.uf)
-                if(data == "Erro"){
-                    window.alert(null,"ERRO: CEP invalido")
+                if(data == "Erro")//Validação caso de erro
+                {
+                    window.alert(null,"ERRO: Erro na hora de buscar por esse CEP")
                 }
                     }
                 });
-        }else{
-            window.alert("ERRO: CEP invalido")
+        }else
+        {
+            window.alert("ERRO: CEP invalido!!!")
         }
         
     });

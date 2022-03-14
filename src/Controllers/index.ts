@@ -1,25 +1,20 @@
 
 import { Request, Response } from 'express';
 import path from 'path';
-import { CEPViewModel } from '../Models/CEPViewModel';
+import { CEPViewModel } from '../Models/CEPViewModel';//ViewModel(Modelo da tela)
 import {AxiosRequest} from '../utils/axios'
 export default {
 get: (req:Request, res:Response) =>{
-    res.sendFile(path.resolve(__dirname, '..','Views','index.html'))
+    res.sendFile(path.resolve(__dirname, '..','Views','index.html'))//Rederiza um html por exemplo a própria tela de index
 },
-usuarios: (req:Request, res:Response) =>{
+APIViaCEP: async (req:Request<CEPViewModel>, res:Response) =>{//Método criado para fazer a busca do CEP pela API
     
-    const params = req.params
-    res.send(params.id)
-},
-//da  repository
-APIViaCEP: async (req:Request, res:Response) =>{
-    var Result = "";
-    const DadosViewModel = new CEPViewModel(req.params.id);
-        const BuscaCep = await AxiosRequest.get(`https://viacep.com.br/ws/${DadosViewModel.cep}/json/`);
-        Result = BuscaCep.data;
+    const DadosViewModel = new CEPViewModel(req.params.cep);//Utilização da propriedade da model(CEPViewModel)
 
-    res.send(Result)
+        const BuscaCep = await AxiosRequest.get(`https://viacep.com.br/ws/${DadosViewModel.cep}/json/`);
+        const Result = BuscaCep.data;
+
+    res.send(Result)//retorna os dados da API
 },
 
 }

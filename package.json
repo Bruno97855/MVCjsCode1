@@ -9,7 +9,8 @@
     "nodemon": "^2.0.15",
     "path": "^0.12.7",
     "tabulator-tables": "^5.1.6",
-    "ts-node-dev": "^1.1.8"
+    "ts-node-dev": "^1.1.8",
+    "tsyringe": "^4.6.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
