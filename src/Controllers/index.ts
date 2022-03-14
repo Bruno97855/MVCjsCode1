@@ -14,10 +14,11 @@ usuarios: (req:Request, res:Response) =>{
 },
 //da  repository
 APIViaCEP: async (req:Request, res:Response) =>{
-    
+    var Result = "";
     const DadosViewModel = new CEPViewModel(req.params.id);
-       const BuscaCep = await AxiosRequest.get(`https://viacep.com.br/ws/${DadosViewModel.cep}/json/`);
-       const Result = BuscaCep.data;
+        const BuscaCep = await AxiosRequest.get(`https://viacep.com.br/ws/${DadosViewModel.cep}/json/`);
+        Result = BuscaCep.data;
+
     res.send(Result)
 },
 
