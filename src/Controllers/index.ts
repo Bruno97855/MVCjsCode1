@@ -10,6 +10,7 @@ get: (req:Request, res:Response) =>{
 },
 APIViaCEP: async (req:Request<CEPViewModel>, res:Response) =>{//Método criado para fazer a busca do CEP pela API
     
+    
     const DadosViewModel = new CEPViewModel(req.params.cep);//Utilização da propriedade da model(CEPViewModel)
 
         const BuscaCep = await AxiosRequest.get(`https://viacep.com.br/ws/${DadosViewModel.cep}/json/`);
