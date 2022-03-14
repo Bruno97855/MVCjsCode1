@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP MVC</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/Js/Repos.js"></script>
+    
+    <link rel="stylesheet" href="/css/Styles.css">
+</head>
+<body>
+    <h1><strong>Consulta CEP</strong></h1>
+   
+    <input type="number"   id="cep" class="textBox" /> 
+    <button class="Buscar" id="Buscar">Buscar</button>
+    <p>Dados do CEP:</p>
+    <table >
+        <tr>
+            <td>CEP:</td>
+            <td><input type="text" id="DataCep" class="textBox" /> </td>
+        </tr>
+        <tr>
+            <td>Bairro:</td>
+            <td><input type="text"   id="DataBairro" class="textBox" />  <br /></td>
+        </tr>
+            <tr>
+            <td>Complemento:</td>
+            <td><input type="text"   id="DataCompl" class="textBox" />  <br /></td>
+        </tr>
+        <tr>
+            <td>IBGE:</td>
+            <td><input type="text"   id="DataIBGE" class="textBox" />  <br /></td>
+        </tr>
+        <tr>
+            <td>Logradouro:</td>
+            <td><input type="text"   id="DataLograd" class="textBox" />  <br /></td>
+        </tr>
+        <tr>
+            <td>Localidade:</td>
+            <td><input type="text"   id="DataLocalid" class="textBox" />  <br /></td>
+        </tr>
+        <tr>
+            <td>Siafi:</td>
+            <td><input type="text"   id="DataSiafi" class="textBox" />  <br /></td>
+        </tr>
+        <tr>
+            <td>UF:</td>
+            <td><input type="text"   id="DataUF" class="textBox" />  <br /></td>
+        </tr>
+        </table>
+
+
+
+<!--         //arquitetura:
+        //Index.html (view)
+        //Index.ts (ações do botão / mostra na tela)
+        //apresentação (aqui tem os metodos que serão usados para buscar os dados na repository)
+        //rota
+        //repository (aqui é feito a busca dos dados na API)
+        //model (é usado para conter os metodos relativos ao modelo de dados)
+        ///essa classe é usada também para montar o objeto que será enviado para a api
+
+        function BuscarCep(cep){
+            /* await 
+            apresentar(repository.method(cep)); */ //devolve uma lista de objetos
+              console.log(cep)
+             $.ajax({
+             url:"/usuarios/"+ cep,
+             success: function(data){
+                CEPModel(data);
+                 }
+             }); 
+        } -->
+
+ 
+</body>
+</html>
