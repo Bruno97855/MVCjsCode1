@@ -10,41 +10,61 @@
     <link rel="stylesheet" href="/css/Styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
+
 <body>
-    <div class="Box-screen">
-        <div class="CenterText">
-            <h1><strong>Consulta CEP</strong></h1>
-            <input type="text" id="cep" class="textBox" placeholder="Digite o CEP" data-ls-module="charCounter" maxlength="8" required/> 
-            <button class="btn-Buscar" id="Buscar">Buscar</button>
-            <p>Dados do CEP:</p>
-        </div>
-        <table class="CenterScreen" >
-            <tr>
-                <td>CEP:</td>
-                <td><input type="text" id="DataCep" class="textBox" disabled=""/> </td>
-                <td>Bairro:</td>
-                <td><input type="text"   id="DataBairro" class="textBox" disabled=""/>  <br /></td>
-            </tr>
-            <tr>
-                <td>Complemento:</td>
-                <td><input type="text"   id="DataCompl" class="textBox" disabled=""/> </td>
-                <td>IBGE:</td>
-                <td><input type="text"   id="DataIBGE" class="textBox" disabled=""/> </td>
-            </tr>
-            <tr>
-                <td>Logradouro:</td>
-                <td><input type="text"   id="DataLograd" class="textBox" disabled=""/>  </td>
-                <td>Localidade:</td>
-                <td><input type="text"   id="DataLocalid" class="textBox" disabled=""/> </td>
-            </tr>
-            <tr>
-                <td>Siafi:</td>
-                <td><input type="text"   id="DataSiafi" class="textBox" disabled=""/> </td>
-                <td>UF:</td>
-                <td><input type="text"   id="DataUF" class="textBox" disabled=""/> </td>
-            </tr>
-            </table>
+<div class="header">
+    <div class="inner-header flex">
+        <div class="Box-screen">
+            <div class="CenterText">
+                <h1><strong>Consulta CEP</strong></h1>
+                <input type="text" id="cep" class="textBoxSearch" placeholder="Digite o CEP" data-ls-module="charCounter" maxlength="8" required/> 
+                <button class="btn-Buscar" id="Buscar">Buscar</button>
+                <p>Dados do CEP:</p>
+            </div>
+            <table class="CenterScreen" >
+                <tr>
+                    <td>CEP:</td>
+                    <td><input type="text" id="DataCep" class="textBox" disabled=""/> </td>
+                    <td>Bairro:</td>
+                    <td><input type="text"   id="DataBairro" class="textBox" disabled=""/>  <br /></td>
+                </tr>
+                <tr>
+                    <td>Complemento:</td>
+                    <td><input type="text"   id="DataCompl" class="textBox" disabled=""/> </td>
+                    <td>IBGE:</td>
+                    <td><input type="text"   id="DataIBGE" class="textBox" disabled=""/> </td>
+                </tr>
+                <tr>
+                    <td>Logradouro:</td>
+                    <td><input type="text"   id="DataLograd" class="textBox" disabled=""/>  </td>
+                    <td>Localidade:</td>
+                    <td><input type="text"   id="DataLocalid" class="textBox" disabled=""/> </td>
+                </tr>
+                <tr>
+                    <td>Siafi:</td>
+                    <td><input type="text"   id="DataSiafi" class="textBox" disabled=""/> </td>
+                    <td>UF:</td>
+                    <td><input type="text"   id="DataUF" class="textBox" disabled=""/> </td>
+                </tr>
+                </table>
+        </div> 
     </div>
+    <div>
+        <svg class="waves" xmls="https://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999" viewBox="0 24 150 28" preserveAspectRatio="none"
+            shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)"/>
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"/>
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"/>
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"/>
+            </g>
+        </svg>
+    </div>
+</div>
+     
     
 <!--         //arquitetura:
         //Index.html (view)
