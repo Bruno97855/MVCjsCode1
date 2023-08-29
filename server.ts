@@ -6,4 +6,5 @@ const port = 3000;
 server.use(express.json());
 server.use(Newroute);
 server.use(express.static("public"));
-server.listen(port);
+server.listen(port, () => {
+    console.log(`Server is running on: http://localhost:${port}/`);});

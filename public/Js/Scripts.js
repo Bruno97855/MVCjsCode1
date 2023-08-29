@@ -2,7 +2,6 @@ $(document).ready(()=>{
     
     $("#Buscar").on("click",function(){
      var cep = $("#cep").val();
-     debugger
         if(cep != null && cep != "" && cep.length == 8)//Validação se tem ou não um CEP informado
         {
             $.ajax({//Faz a chamada na Controller passando pela route
